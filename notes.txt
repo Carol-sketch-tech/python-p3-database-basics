@@ -1,0 +1,56 @@
+Well learn how to create and delete databases tables from SQLite as well as how to add columns to an existing table.
+
+Database structures.
+realtional database ike SQLite store data in a structure we refer to as a table.
+
+Column names
+we always use lowercase letters when reffering to columns names in our database.
+when we have multiple words in a columns name we link them together using underscores rather thatn spaces. we 
+call this convection snake case
+for instance first_name and last_name
+
+DATABASE TABLES.
+How to create, alter and delete database tables.
+
+CREATING TABLES 
+-> when we create a new database, it comes like a sort of black slate. we can therefore create a table inside our dtabase using hte following statement
+
+ run in the terminal the following command lines 
+1. sqlite3 name of the database.db then click enter 
+2. Then run the following 
+     CREATE TABLE name of choice (
+        write the names of the columns while specifying the data type of each column 
+        for example 
+
+        id INTEGER PRIMARY KET 
+        name TEXT
+        age INTEGER
+     );
+
+     Write them inside the parenthesis and after the closing parentrhsis add the colon.
+     the use of capital letters when describing the datatypes is so that we can differentiate the sqlite command from the names we make for the columns
+     Note also that everytime we define the id as a name of a column we should include the INTEGER PRIMARY KEY designation.
+     SQLite databse tables must be indexed by a number. 
+     we want each row in our table to have a number,w hich well call id just like in an excel spreadsheet.
+     numbering out tables rows make our data that mush easier toa ccess update and organize.
+     SQLite comes with a data type designation called Primary key.
+     primary kets are unique and auto-increamenting meaning thet strt at 1 and each new row automatically gets assigned the next numeric values.
+     
+ALTER TABLE.
+say we have created a database and a table within that database,
+and we want to remve or add a column or row in the table.
+we can use the ALTER TABLE statement.
+   1. Adding , remving and renaming columns.
+   - say we have to add a new columns, breed to our cats table.
+    run the following command in the terminal
+      ALTER TABLE cats ADD COLUMN breed TEXT
+   when you run .schema you will notice that the table has been updated with another column named breed 
+    the ALTER statement is not inlcuded but the CREATE statement in included, the schema reflects the current structure of the database 
+    which is reflected as the CREAET statement necessasry to create that structure.
+
+DELETING A TABLE from the database 
+For this we use the DROP TABLE statement
+run the following command line in your terminal
+DROP TABLE cats;
+
+you can exit the sqlite prompt with the .quit command.
